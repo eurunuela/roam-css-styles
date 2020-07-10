@@ -40,7 +40,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
     --strong: #f17c37;
     --emphasis: #DCDEDD;
     --highlight-font-color: #F4F4F4;
-    --highlight-background-color: #34641F;
+    --highlight-background-color: #C0622C;
     --highlight-link-color: #F4F4F4;
     --highlight-padding: 5px 5px 4px 5px;
     --reference-header-color: #2a323a;
@@ -51,12 +51,13 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
     /* Trying out same color for hover */
     --sidebar-shorcut-color: #9f9f9f52;
 
-    --tag-font-color: #515355;
-    --tag-bg-color: rgb(36, 39, 42);
+    --tag-font-color: #DCDEDD;
+    --tag-bg-color: rgb(68, 68, 68);
     --tag-border-radius: 10px;
     --tag-border: 1px solid #35373996;
     --tag-padding: 1px 5px 2px;
-    --tagHover-font-color: hsl(210, 3%, 29%);
+    --tag-font-weight: 500;
+    --tagHover-font-color: #DCDEDD;
     --tagHover-bg-color: rgb(45, 48, 51);
     --tagHover-border: 1px solid rgba(68, 70, 72, .53);
   
@@ -501,7 +502,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   /* TAG */
   .rm-page-ref-tag {
     color: var(--tag-font-color)!important;
-    font-weight: 400;
+    font-weight: var(--tag-font-weight);
     background-color: var(--tag-bg-color);
     border-radius: var(--tag-border-radius);
     border: var(--tag-border);
@@ -510,7 +511,7 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   /* TAG HOVER */
   .rm-page-ref-tag:hover {
     color: var(--tagHover-font-color) !important;
-    font-weight: 400;
+    font-weight: var(--tag-font-weight);
     background-color: var(--tagHover-bg-color);
     border-radius: var(--tag-border-radius);
     border: var(--tagHover-border);
@@ -1412,144 +1413,306 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
   
   span.rm-page-ref[data-tag="Article"] {
       background: #EE5F85;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Article"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="People"] {
       background: #d45dbc;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="People"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Podcast"] {
       background: #CB5AEB;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Podcast"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Talk"] {
       background: #00345C;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Talk"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Papers"] {
-      background: #5ae0c3;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      background: #399480;
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Papers"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Book"] {
       background: #F88B29;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Book"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Research"] {
       background: #5a77e0;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Research"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Writing"] {
       background: #659df7;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Writing"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Programming"] {
       background: #008c12;
-      color: #fff;
-      padding: 3px 7px;
-      line-height: 2em;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
   
+  span.rm-page-ref[data-tag="Programming"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
+
   span.rm-page-ref[data-tag="Ideas"] {
-        background: #FCB815;
-        color: #fff;
-      padding: 3px 4px;
-      font-weight: 700;
-      /*border-radius: 2em;*/
+      background: #FCB815;
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Ideas"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="TwitterPost"] {
       background: #0092E5;
-      color: white;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="TwitterPost"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Waiting"] {
       background: #F9C866;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Waiting"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Finished"] {
       background: #4fd160;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Finished"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Design"] {
       background: #f76565;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Design"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Music"] {
       background: #ff004d;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Music"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="BCBL"] {
       background: #199AEF;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="BCBL"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Photography"] {
       background: #88a2bc;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   }
+
+  span.rm-page-ref[data-tag="Photography"]:hover {
+    background-color: var(--tagHover-bg-color);
+    border-radius: var(--tag-border-radius);
+    border: var(--tagHover-border);
+    padding: var(--tag-padding);
+    text-decoration: none;
+}
   
   span.rm-page-ref[data-tag="Neuroscience"] {
       background: #ff2fa9;
-      color: #fff;
-      padding: 3px 7px;
-      font-weight: 500;
-      /*border-radius: 2em;*/
+      color: var(--main-font-color) !important;
+      padding: var(--tag-padding);
+      font-weight: var(--tag-font-weight);
+      border: var(--tagHover-border);
+      text-decoration: none;
   } 
+
+  span.rm-page-ref[data-tag="Neuroscience"]:hover {
+      background-color: var(--tagHover-bg-color);
+      border-radius: var(--tag-border-radius);
+      border: var(--tagHover-border);
+      padding: var(--tag-padding);
+      text-decoration: none;
+  }
